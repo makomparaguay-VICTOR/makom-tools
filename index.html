@@ -7,15 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; background: #000; overflow: hidden; }
-        .perspective-1000 { perspective: 1000px; }
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    background: linear-gradient(145deg, #1c2326, #242c30);
+    overflow: hidden;
+    color: #e6dccf;
+}        .perspective-1000 { perspective: 1000px; }
         .preserve-3d { transform-style: preserve-3d; }
         .face { position: absolute; width: 100%; height: 100%; background: #1a1a1a; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; color: #f97316; border-radius: 0.5rem; box-shadow: inset 0 0 15px rgba(249,115,22,0.2); backface-visibility: hidden; }
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
         .hidden-screen { display: none !important; }
         .animate-impact { animation: impact 0.2s ease-out; }
         @keyframes impact { 0% { transform: scale(1); } 50% { transform: scale(0.95); } 100% { transform: scale(1); } }
-        
+        /* --- NUEVO SISTEMA NEUMORFICO --- */
+
+.neu {
+    background: #232b2f;
+    border-radius: 2rem;
+    box-shadow: 
+        8px 8px 16px #1a2023,
+        -8px -8px 16px #2c363b;
+}
+
+.neu-inset {
+    background: #232b2f;
+    border-radius: 2rem;
+    box-shadow: 
+        inset 6px 6px 12px #1a2023,
+        inset -6px -6px 12px #2c363b;
+}
+
+.accent {
+    color: #d68a4b;
+}
+
+.accent-bg {
+    background: linear-gradient(145deg, #b46a2f, #e2995d);
+    box-shadow: 
+        4px 4px 10px #1a2023,
+        -4px -4px 10px #2c363b;
+}
         /* Custom Scrollbar for Player List */
         .custom-scroll::-webkit-scrollbar { width: 4px; }
         .custom-scroll::-webkit-scrollbar-track { background: transparent; }
@@ -24,8 +56,7 @@
 </head>
 <body class="text-gray-200 select-none touch-none h-screen flex items-center justify-center">
 
-    <div id="app-container" class="w-full max-w-md h-screen relative overflow-hidden bg-[#070707] shadow-2xl border-x border-white/5">
-        
+<div id="app-container" class="w-full max-w-md h-screen relative overflow-hidden bg-[#232b2f] shadow-[inset_8px_8px_16px_#1a2023,inset_-8px_-8px_16px_#2c363b]">        
         <!-- HOME SCREEN -->
         <div id="screen-home" class="flex flex-col h-full bg-[#070707]">
             <header class="p-8 pb-4 flex flex-col items-center">
